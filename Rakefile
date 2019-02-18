@@ -11,6 +11,11 @@ namespace :greeting do
   end
 end
 
+desc 'drop into the Pry console'
+  task :conole => :environment do 
+    Pry.start  
+  end 
+
 task :environment do 
   require_relative './config/environment'
 end 
